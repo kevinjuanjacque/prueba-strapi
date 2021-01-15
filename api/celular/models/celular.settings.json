@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "celulars",
+  "info": {
+    "name": "celular",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "precio": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "PrecioOferta": {
+      "type": "string"
+    }
+  }
+}
